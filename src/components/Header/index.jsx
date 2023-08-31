@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './index.css'
+import {List, X} from '@phosphor-icons/react'
+
+
 
 function Header() {
     const[abrirFechar, setAbrirFechar] = useState(false)
@@ -17,7 +20,7 @@ function Header() {
     <header>
         <div className="menu-mobile">
             <div className="botao-menu">
-                <button onClick={handleAbrirFecharMenu}>{abrirFechar == true ? "Fechar Menu" : "Abrir Menu"}</button>
+                <button onClick={handleAbrirFecharMenu}>{abrirFechar == true ? <X size={32} />: <List size={32} />}</button>
             </div>
 
         <div className={` menu ${abrirFechar ? "" : "close"}`}>
